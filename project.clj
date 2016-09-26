@@ -33,7 +33,7 @@
                         :source-paths ["src/cljs" "test/cljs"]
                         :compiler     {:output-to     "target/tests/out/test.js"
                                        :output-dir    "target/tests/out"
-                                       :main          "try-doo-with-spec.test-runner"
+                                       :main          "try-doo-with-spec.runner"
                                        :target        :nodejs
                                        :verbose       true
                                        :source-map    true
