@@ -17,7 +17,7 @@
                  [com.cemerick/url "0.1.2-SNAPSHOT"]]
 
   :plugins [[lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]
-            #_[lein-doo "0.1.7" :exclusions [[org.clojure/clojurescript]]]]
+            [lein-doo "0.1.7" :exclusions [[org.clojure/clojurescript]]]]
 
   :clean-targets ^{:protect false} ["resources/public/js/" "target" "out"]
 
@@ -31,9 +31,9 @@
 
   :cljsbuild {:builds [{:id           "test"
                         :source-paths ["src/cljs" "test/cljs"]
-                        :compiler     {:output-to     "resources/public/js/tests/test.js"
-                                       :output-dir    "resources/public/js/tests/out"
-                                       :main          "finops-admin.test-runner"
+                        :compiler     {:output-to     "target/tests/out/test.js"
+                                       :output-dir    "target/tests/out"
+                                       :main          "try-doo-with-spec.test-runner"
                                        :target        :nodejs
                                        :verbose       true
                                        :source-map    true
