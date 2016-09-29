@@ -7,6 +7,7 @@
                  [clojure-future-spec "1.9.0-alpha12-2"]
                  [org.clojure/clojurescript "1.9.229"]
                  [com.taoensso/timbre "4.7.4"]
+                 [org.clojure/test.check "0.9.0"]
                  [hiccup "1.0.5" :exclusions [cljsjs/react]]
                  [ring "1.6.0-beta6"]
                  [ring/ring-defaults "0.3.0-beta1"]
@@ -31,14 +32,11 @@
 
   :cljsbuild {:builds [{:id           "test"
                         :source-paths ["src/cljs" "test/cljs"]
-                        :compiler     {:output-to     "target/tests/out/test.js"
-                                       :output-dir    "target/tests/out"
+                        :compiler     {:output-to     "resources/public/tests/test.js"
+                                       :output-dir    "resources/public/tests/"
                                        :main          "try-doo-with-spec.runner"
-                                       :target        :nodejs
                                        :verbose       true
                                        :source-map    true
                                        :optimizations :none}}]}
   :doo {:build "test"
-        :paths {:node "/Users/ag.ibragimov/.nvm/versions/node/v6.3.0/bin/node"}
-        :alias {:default  [:node]}}
-  )
+        :alias {:default  [:phantom]}})
