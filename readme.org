@@ -1,0 +1,16 @@
+* Example of failing datetime generator in test.chuck
+
+ - Build the container:
+#+BEGIN_SRC bash
+  docker build -t chuck .
+#+END_SRC
+
+- Run the container:
+#+BEGIN_SRC bash
+  docker run -it chuck /bin/bash
+#+END_SRC
+
+- Run the tests:
+#+BEGIN_SRC bash
+  lein doo
+#+END_SRC

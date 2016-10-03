@@ -15,7 +15,9 @@
                  [metosin/ring-http-response "0.8.0"]
                  [bidi "2.0.11"]
                  [prone "1.1.2"]
-                 [com.cemerick/url "0.1.2-SNAPSHOT"]]
+                 [com.gfredericks/test.chuck "0.2.7"]                
+                 [com.cemerick/url "0.1.2-SNAPSHOT"]
+                 [cljsjs/moment "2.10.6-4"]]
 
   :plugins [[lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]
             [lein-doo "0.1.7" :exclusions [[org.clojure/clojurescript]]]]
@@ -39,4 +41,5 @@
                                        :source-map    true
                                        :optimizations :none}}]}
   :doo {:build "test"
+        :paths {:phantom "/usr/local/bin/phantomjs"}
         :alias {:default  [:phantom]}})
